@@ -47,29 +47,13 @@ int main()
 		float pm10 = float((High10*256 + Low10)) / 10;
 		cout << "pm2.5 = " << pm25 << "ug/m3" << endl;
 		cout << "pm10 = " << pm10 << "ug/m3" << endl;
-
-		printf("%.2X", sReceivedChar[0]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[1]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[2]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[3]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[4]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[5]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[6]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[7]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[8]);
-		cout << " ";
-		printf("%.2X", sReceivedChar[9]);
-		cout << endl;
-		cout << endl;
-
+		
+		for(uint16_t i = 0; i<10; i++)
+		{
+			printf("%.2X", sReceivedChar[i]);
+			cout << " ";
+		}
+		
 		int delta = 200000;
 		while (delta)
 		{
